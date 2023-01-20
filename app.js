@@ -124,7 +124,8 @@ function showItem(e) {
             ? data[prop]
             : JSON.stringify(data[prop]);
 
-        output.innerHTML += `<div class="information">${prop} : ${html}</div>`;
+        let propTemp = prop.replace("_", " ");
+        output.innerHTML += `<div><span class="bigText">${propTemp}</span>: ${html}</div>`;
       }
     })
     .catch((err) => {
